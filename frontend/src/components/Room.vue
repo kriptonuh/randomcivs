@@ -1,7 +1,7 @@
 <template>
     <div class="room">
 <!--        <h1 class="room-name">{{id}}</h1>-->
-        <MemberList :members="members"/>
+        <RoomLeftMenu :members="members"/>
         <LeadersComponent :leaders="leaders" :should-render="showLeaders"/>
         <RandomResultComponent :randomResults="randomResults" :showRardomResults="showRardomResults"/>
     </div>
@@ -23,8 +23,8 @@
 
 <script>
 	import LeadersComponent from "./LeadersComponent";
-	import MemberList from "./MemberList";
 	import RandomResultComponent from "./RandomResultComponent";
+	import RoomLeftMenu from "./RoomLeftMenu";
 
 	let memberTemplate = {
 		name: "sanyan",
@@ -66,7 +66,7 @@
 		},
 		components: {
 			LeadersComponent,
-			MemberList,
+			RoomLeftMenu,
 			RandomResultComponent
 		},
 		name: "Room",
