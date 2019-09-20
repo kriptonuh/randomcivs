@@ -1,6 +1,6 @@
 <template>
     <div class="room">
-        <h1 class="room-name">{{id}}</h1>
+<!--        <h1 class="room-name">{{id}}</h1>-->
         <MemberList :members="members"/>
         <LeadersComponent :leaders="leaders" :should-render="showLeaders"/>
         <RandomResultComponent :randomResults="randomResults" :showRardomResults="showRardomResults"/>
@@ -10,6 +10,7 @@
 <style lang="less">
 
     .room {
+        height: 100%;
         display: flex;
         flex-wrap: wrap;
 
@@ -82,22 +83,24 @@
 		created: function () {
 			socket = new WebSocket("ws://" + location.hostname + ":" + 9000 + "/randomizer");
 
-			for (let i = 0; i < 46; i++) {
-				leaders.push(leaderTemplate)
-			}
-			for (let i = 0; i < 8; i++) {
-				members.push(memberTemplate)
-			}
-			for (let i = 0; i < 8; i++) {
-				let randomResult = {};
-				randomResult.member = memberTemplate;
-
-				let options = [];
-				for (let i = 0; i < 3; i++) {
-					options.push(leaderTemplate)
+			if(leaders.length ===0) {
+				for (let i = 0; i < 46; i++) {
+					leaders.push(leaderTemplate)
 				}
-				randomResult.options = options;
-				randomResults.push(randomResult)
+				for (let i = 0; i < 8; i++) {
+					members.push(memberTemplate)
+				}
+				for (let i = 0; i < 8; i++) {
+					let randomResult = {};
+					randomResult.member = memberTemplate;
+
+					let options = [];
+					for (let i = 0; i < 3; i++) {
+						options.push(leaderTemplate)
+					}
+					randomResult.options = options;
+					randomResults.push(randomResult)
+				}
 			}
 		},
 		mounted: function () {

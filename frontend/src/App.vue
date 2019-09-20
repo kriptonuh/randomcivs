@@ -1,17 +1,12 @@
 <template>
     <div class="app">
         <header>
-            <p class="sid-meiers">SID MEIER'S</p>
-            <div class="svg-block">
-                <img class="civilization" src="./assets/header/civ.png" alt="civilization">
-                <img class="vi" src="./assets/header/vi.png" alt="vi">
-            </div>
-            <p class="randomizer"></p>
+            <Header/>
         </header>
         <menu class="menu" v-show="showMenu">
-            <router-link v-on:click.native="showMenu=false" to="/createRoom">Создать игру</router-link>
-            <router-link v-on:click.native="showMenu=false" to="/room/1">присоединиться к игре 1</router-link>
-            <router-link v-on:click.native="showMenu=false" to="/room/2">присоединиться к игре 2</router-link>
+            <router-link v-on:click.native="" to="/createRoom">Создать игру</router-link>
+            <router-link v-on:click.native="" to="/room/1">присоединиться к игре 1</router-link>
+            <router-link v-on:click.native="" to="/room/2">присоединиться к игре 2</router-link>
         </menu>
         <main class="main-area">
             <router-view></router-view>
@@ -27,6 +22,7 @@
 	import CreateRoom from './components/CreateRoom.vue';
 	import VueRouter from "vue-router";
 	import Vue from "vue";
+	import Header from "./components/Header";
 
 	const router = new VueRouter({
 		mode: 'history',
@@ -50,7 +46,8 @@
 	export default {
 		name: 'app',
 		components: {
-			Room
+			Room,
+			Header
 		},
 		data: function () {
 			return {
@@ -79,7 +76,7 @@
     @mobile-area: 800px;
 
     // Mode: Tablet
-    @tablet: 1000px;
+    @tablet: 1200px;
     @tablet-area: 1024px;
 
     // Mode: Desktop
@@ -93,15 +90,16 @@
         margin: 0;
         padding: 0;
         color: #fff;
+        font-family: 'Fira Code', monospace;
     }
 
     .main-area-template {
-        background-color: #19375d;
-        opacity: 0.7;
+        padding: 13px;
+        background-color: rgba(25, 55, 93, 0.8);
         outline: 4px solid #0b1d32;
         outline-offset: -14px;
-        box-shadow: 0 0 10px 10px rgba(0, 0, 0.2, 0.3),
-        inset 0 0 30px 30px rgba(0, 0, 0.3, 0.3);
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2),
+        inset 0 0 30px 30px rgba(0, 0, 0, 0.3);
     }
 
     .app {
@@ -120,34 +118,19 @@
         overflow: hidden;
 
         header {
-            padding: 20px;
             height: 250px;
             .main-area-template;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        }
 
-            .sid-meiers {
-                font-weight: bolder;
-                font-size: 1.7rem;
-                font-family: 'Julius Sans One', sans-serif;
-            }
-
-            .svg-block {
-                display: flex;
-                align-items: center;
-                margin: 10px;
-
-                img {
-                    margin: 0 20px;
-
-                }
-                img:hover {
-                    fill: red;
-                }
-
-
-            }
+        .menu {
+            margin: 2px 0;
+            height: 60px;
+            .main-area-template;
+            outline: none;
+            border-top: 4px solid #896714;
+            border-bottom: 4px solid #705511;
+            box-shadow: inset 0 0 10px 10px rgba(35, 35, 35, 0.3),
+            0 0 10px 10px rgba(0, 0, 0.2, 0.2);
         }
 
         .main-area {
@@ -182,6 +165,10 @@
             width: 100%;
         }
 
+        .menu {
+            width: 100%;
+        }
+
         img {
             height: 50px;
         }
@@ -193,6 +180,10 @@
         }
 
         .main-area {
+            width: 70%;
+        }
+
+        .menu {
             width: 70%;
         }
 
