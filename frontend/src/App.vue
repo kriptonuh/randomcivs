@@ -18,8 +18,8 @@
 </template>
 
 <script>
-	import Room from './components/Room.vue';
-	import CreateRoom from './components/CreateRoom.vue';
+	import Room from './components/pages/Room.vue';
+	import CreateRoom from './components/pages/CreateRoom.vue';
 	import VueRouter from "vue-router";
 	import Vue from "vue";
 	import Header from "./components/elements/Header";

@@ -16,10 +16,10 @@
 </template>
 
 <script>
-	import GreenButton from "./elements/GreenButton";
-	import MemberList from "./MemberList";
-	import NotActiveButton from "./elements/NotActiveButton";
-	import YourBansComponent from "./YourBansComponent";
+	import GreenButton from "../elements/GreenButton";
+	import MemberList from "./MemberListBlock";
+	import NotActiveButton from "../elements/NotActiveButton";
+	import YourBansComponent from "./MemberBansBlock";
 
 	export default {
 		components: {

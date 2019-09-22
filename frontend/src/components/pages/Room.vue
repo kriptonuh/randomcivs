@@ -22,9 +22,9 @@
 
 
 <script>
-	import LeadersComponent from "./LeadersComponent";
-	import RandomResultComponent from "./RandomResultComponent";
-	import RoomLeftMenu from "./RoomLeftMenu";
+	import LeadersComponent from "../blocks/LeadersBlock";
+	import RandomResultComponent from "../blocks/RandomResultBlock";
+	import RoomLeftMenu from "../blocks/RoomLeftMenuBlock";
 
 	let memberTemplate = {
 		name: "sanyan",

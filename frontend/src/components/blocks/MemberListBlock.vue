@@ -4,7 +4,7 @@
             <li class="member" v-for="member in members">
                 <p class="member-name">{{member.name}}:</p>
                 <p class="member-bans">Bans: {{member.usedBans}}/5</p>
-                <img class="member-ready-icon" src="./../assets/logo.png" alt="./src/assets/logo.png"/>
+                <img class="member-ready-icon" src="../../assets/logo.png" alt="./src/assets/logo.png"/>
             </li>
         </ul>
     </div>
