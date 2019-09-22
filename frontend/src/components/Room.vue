@@ -35,7 +35,8 @@
 		name: "Алиенора Аквитанская",
 		description: "Османская империя",
 		leader: 'lol',
-		icon: "./../src/assets/logo.png",
+		icon: "./../src/assets/leaders/Icon_leader_cleopatra.png",
+		iconCiv: "./../src/assets/nations/Australian_(Civ6).png",
 		uniqueItems: [
 			{
 				description: "blabla"

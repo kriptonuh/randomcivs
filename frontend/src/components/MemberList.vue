@@ -23,7 +23,6 @@
 <style lang="less">
     .member-list {
         width: 100%;
-        margin-top: 10px;
         display: flex;
         flex-direction: column;
 
@@ -31,7 +30,7 @@
             width: 100%;
 
             .member {
-                padding: 10px 10px;
+                padding: 7px 7px;
                 width: 100%;
                 list-style-type: none;
                 display: flex;
@@ -42,7 +41,7 @@
 
 
                 .member-name {
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     white-space: nowrap;
                     color: rgb(195, 200, 209);
                     text-align: left;
@@ -52,7 +51,7 @@
                     margin-top: 0px;
                     margin-bottom: 0px;
                     white-space: nowrap;
-                    font-size: 1.5rem;
+                    font-size: 1rem;
                     color: rgb(195, 200, 209);
                     text-align: right;
                 }

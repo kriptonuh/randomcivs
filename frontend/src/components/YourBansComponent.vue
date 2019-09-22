@@ -9,16 +9,6 @@
                 <p>Lorem...</p>
                 <p>Lorem...</p>
                 <p>Lorem...</p>
-                <p>Lorem...</p>
-                <p>Lorem...</p>
-                <p>Lorem...</p>
-                <p>Lorem...</p>
-                <p>Lorem...</p>
-                <p>Lorem...</p>
-                <p>Lorem...</p>
-                <p>Lorem...</p>
-                <p>Lorem...</p>
-                <p>Lorem...</p>
             </ul>
         </div>
     </div>

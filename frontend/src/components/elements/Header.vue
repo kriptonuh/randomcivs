@@ -2,8 +2,8 @@
     <div class="header-container">
         <p class="sid-meiers">SID MEIER'S</p>
         <div class="img-block">
-            <img class="civilization" src="./../assets/header/civ.png" alt="civilization">
-            <img class="vi" src="./../assets/header/vi.png" alt="vi">
+            <img class="civilization" src="../../assets/header/civ.png" alt="civilization">
+            <img class="vi" src="../../assets/header/vi.png" alt="vi">
         </div>
         <p class="randomizer">Nations randomizer</p>
     </div>
@@ -26,7 +26,7 @@
 
         .sid-meiers {
             font-weight: bolder;
-            font-size: 1.7rem;
+            font-size: 1rem;
             font-family: 'Julius Sans One', sans-serif;
             width: 100%;
         }
@@ -38,20 +38,24 @@
             width: 100%;
             justify-content: center;
 
-            .civilization{
-                margin: 0 20px;
-                max-width: 800px
+            .civilization {
+                display: block;
+                margin: 0 10px;
+                width: 45%;
+                height: auto;
+                max-height: 40%;
             }
-            .vi {
-                margin: 0 20px;
-                max-width: 150px
 
+            .vi {
+                margin: 0 10px;
+                width: 7%;
+                height: auto;
+                max-height: 40%;
             }
         }
 
         .randomizer {
-            margin-top: 10px;
-            font-size: 2rem;
+            font-size: 1.3rem;
             font-family: 'Julius Sans One', sans-serif;
             font-weight: bolder;
             width: 100%;

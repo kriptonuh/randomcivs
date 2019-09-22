@@ -7,7 +7,7 @@
                     <img class="leader-icon" :src="resultOption.icon" :alt="resultOption.icon">
                     <div class="leader-description">
                         <p class="leader-name">{{resultOption.name}}</p>
-                        <p class="leader-civilization">{{resultOption.description}}</p>
+                        <p class="civilization-name">{{resultOption.description}}</p>
 
                         <!--                <div class="unique-items-container">-->
                         <!--                    <div v-for="uniqueItem in leader.uniqueItems" class="unique-item">-->

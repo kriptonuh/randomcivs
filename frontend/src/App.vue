@@ -22,7 +22,7 @@
 	import CreateRoom from './components/CreateRoom.vue';
 	import VueRouter from "vue-router";
 	import Vue from "vue";
-	import Header from "./components/Header";
+	import Header from "./components/elements/Header";
 
 	const router = new VueRouter({
 		mode: 'history',
@@ -94,10 +94,10 @@
     }
 
     .main-area-template {
-        padding: 13px;
+        padding: 10px;
         background-color: rgba(25, 55, 93, 0.8);
-        outline: 4px solid #0b1d32;
-        outline-offset: -14px;
+        outline: 3px solid #0b1d32;
+        outline-offset: -10px;
         box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2),
         inset 0 0 30px 30px rgba(0, 0, 0, 0.3);
     }
@@ -118,17 +118,19 @@
         overflow: hidden;
 
         header {
-            height: 250px;
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 170px;
             .main-area-template;
         }
 
         .menu {
-            margin: 2px 0;
-            height: 60px;
+            height: 50px;
             .main-area-template;
             outline: none;
-            border-top: 4px solid #896714;
-            border-bottom: 4px solid #705511;
+            border-top: 3px solid #896714;
+            border-bottom: 3px solid #705511;
             box-shadow: inset 0 0 10px 10px rgba(35, 35, 35, 0.3),
             0 0 10px 10px rgba(0, 0, 0.2, 0.2);
         }
@@ -136,7 +138,7 @@
         .main-area {
             top: 0;
             left: 0;
-            height: 100%;
+            height: calc(100% - 170px - 50px);
             .main-area-template;
         }
 
@@ -174,7 +176,7 @@
         }
     }
 
-    @media (min-width: @desktop) {
+    @media (min-width: @tablet) {
         header {
             width: 70%;
         }

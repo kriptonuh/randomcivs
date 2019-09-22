@@ -41,25 +41,24 @@
     .left-menu-container {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        margin-top: 0;
-        width: 400px;
+        width: 20%;
         height: 100%;
         background-color: rgba(9, 49, 73, 0.7);
         box-shadow: inset -40px 0 30px -40px rgba(0, 0, 0, 0.3),
         10px 0 10px -10px rgba(0, 0, 0, 0.3);
         border-right: rgba(20, 53, 92, 0.7) solid 3px;
-        outline: 4px solid rgb(11, 62, 76);
+        outline: 3px solid rgb(11, 62, 76);
         outline-offset: -7px;
 
         .left-menu-module {
             padding-top: 10px;
             padding-left: 3px;
+            margin-bottom: 10px;
             display: flex;
             justify-content: center;
             flex-direction: column;
-            width: calc(100% - 20px);
+            width: calc(100% - 12px);
         }
     }
 

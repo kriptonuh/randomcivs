@@ -1,12 +1,12 @@
 <template>
     <div class="leaders-container" v-show="shouldRender">
-        <div v-for="leader in leaders" class="leader">
+        <div v-for="leader in leaders" class="leader noselect">
             <img class="leader-icon" :src="leader.icon" :alt="leader.icon">
             <div class="leader-description">
                 <p class="leader-name">{{leader.name}}</p>
                 <div class="civ-info">
-                    <img class="civilization-icon" :src="leader.icon" :alt="leader.icon">
-                    <p class="leader-civilization">{{leader.description}}</p>
+                    <p class="civilization-name">ffff</p>
+                    <img class="civilization-icon" :src="leader.iconCiv" :alt="leader.iconCiv">
                 </div>
             </div>
         </div>
@@ -27,17 +27,17 @@
 <style scoped lang="less">
 
     .leaders-container {
-        display: flex;
-        margin: 15px 10px;
+        padding: 7px;
+        display: inline-flex;
         flex-wrap: wrap;
         flex-flow: row wrap;
-        max-width: calc(100% - 400px - 20px);
-        justify-content: space-around;
+        max-width: 80%;
+        justify-content: start;
 
         .leader {
-            width: 280px;
-            height: 80px;
-            margin: 0px 16px;
+            margin-left: 10px;
+            width: calc(100% / 5 - 14px);
+            height: 60px;
             display: flex;
             align-items: flex-start;
             border: #0b1d32 solid 1px;
@@ -46,6 +46,9 @@
             box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2),
             inset 0 0 10px 10px rgba(56, 56, 56, 0.2);
 
+            &:hover {
+                background: radial-gradient(at top, #1b487a, rgba(11, 29, 50, 0.8));
+            }
             .leader-icon {
                 width: 50px;
                 height: 50px;
@@ -63,62 +66,49 @@
 
                 .leader-name {
                     max-height: 30%;
-                    margin: 2px 10px;
                     text-align: left;
                     line-height: 1;
-                    font-size: 1.3rem;
+                    color: rgb(208, 213, 223);
+
                 }
 
                 .civ-info {
+                    padding: 3px;
                     display: flex;
                     align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 26px;
 
-                    .leader-civilization {
-                        max-height: 30%;
-                        margin: 2px 10px;
+                    .civilization-name {
                         text-align: right;
+                        white-space: nowrap;
                         line-height: 1;
-                        font-size: 1rem;
+                        font-size: 0.75rem;
+                        color: rgb(211, 216, 226);
+
                     }
 
                     .civilization-icon {
-                        width: 25px;
-                        height: 25px;
-                        margin: 3px;
+                        width: 17px;
+                        height: 17px;
                         border-radius: 50%;
-                    }
-                }
-            }
-
-            .unique-items-container {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                height: 30px;
-
-                .unique-item {
-                    display: flex;
-                    margin: 0px 5px;
-
-                    .unique-item-icon {
-                        width: 20px;
-                        height: 20px;
-                    }
-
-                    .unique-item-description {
-                        margin: 0px 5px;
+                        text-align: right;
                     }
                 }
             }
         }
     }
-
-    .leaders-container::after {
+    &:after{
         content: "";
         flex: auto;
-
-        .leader::after {
-            margin: 100px;
-        }
+    }
+    .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
     }
 </style>
